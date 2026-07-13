@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DARIMATI × REXTREME 2026 — 웰컴키트 사전등록</title>
+<meta name="description" content="8월 1일 광교 수원컨벤션센터, REXTREME 2026 DARIMATI 부스. 사전등록 후 부스에 오면 선착순 100명에게 웰컴키트를 드립니다.">
+<meta name="theme-color" content="#E4E1DC">
+<meta property="og:title" content="DARIMATI × REXTREME 2026 — 웰컴키트 사전등록">
+<meta property="og:description" content="사전등록 후 8월 1일 부스 방문. 선착순 100명 웰컴키트.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:type" content="website">
+<style>
+/* ─────────────────────────────────────────────
+   DARIMATI × REXTREME 2026
+   Palette sampled from the BR-001 main campaign image:
+   backdrop #D5D1CD · floor #C3B9B7 · outsole #17171A
+   Monochrome warm neutral. Emphasis comes from ink
+   inversion, not from an accent hue.
+   Committed light theme — the campaign image is the ground.
+   ───────────────────────────────────────────── */
+:root{
+  color-scheme: light;
+  --ground:#E4E1DC;
+  --surface:#F3F1EF;
+  --white:#FBFAF9;
+  --taupe:#C3B9B7;
+  --line:#CFC9C5;
+  --ink:#17171A;
+  --ink-soft:#2A2A2E;
+  --graphite:#565A5E;
+  --muted:#5C5754;
+
+  --rail:min(480px, 100%);
+  --pad:22px;
+
+  --f-display:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-body:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+
+  --step--1:13px;
+  --step-0:16px;
+  --step-1:19px;
+  --step-2:clamp(22px,5.6vw,26px);
+  --step-3:clamp(28px,7.6vw,38px);
+  --step-4:clamp(34px,9.4vw,46px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:var(--step-0);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:where(a,button,input,select,summary,[tabindex]):focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+/* ── layout primitives ── */
+.rail{width:var(--rail);margin-inline:auto;padding-inline:var(--pad)}
+section{padding-block:clamp(56px,13vw,84px)}
+.stack{display:flex;flex-direction:column}
+.gap-s{gap:10px} .gap-m{gap:18px} .gap-l{gap:30px}
+
+/* ── type roles ── */
+.eyebrow{
+  font-family:var(--f-display);
+  font-size:11px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--graphite);
+  margin:0;
+}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:700;letter-spacing:-.025em;line-height:1.2}
+h1{font-size:var(--step-4)}
+h2{font-size:var(--step-3)}
+h3{font-size:var(--step-1);letter-spacing:-.015em}
+p{margin:0}
+.lede{color:var(--muted);font-size:var(--step-0)}
+.lede b{color:var(--ink);font-weight:700}
+.fine{font-size:var(--step--1);color:var(--muted);line-height:1.6}
+.num{font-family:var(--f-display);font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.05em}
+
+/* ── hero ── */
+.hero{position:relative;padding-block:clamp(30px,9vw,54px) clamp(48px,12vw,72px);overflow:hidden}
+.hero__ring{
+  position:absolute;top:clamp(120px,32vw,190px);left:50%;translate:-50% 0;
+  width:min(430px,112vw);aspect-ratio:1;
+  border:1px solid var(--taupe);border-radius:50%;
+  pointer-events:none;
+}
+.hero__inner{position:relative}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:6px 40px}
+.brandbar img{width:112px;height:auto}
+.brandbar .x{font-family:var(--f-display);font-size:12px;letter-spacing:.16em;color:var(--graphite);font-weight:700}
+.hero h1{margin-top:14px}
+.hero .lede{margin-top:16px;max-width:34ch}
+
+/* countdown */
+.count{margin-top:34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:22px}
+.count__label{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.count__grid{display:flex;align-items:flex-end;gap:clamp(10px,3.4vw,20px);margin-top:10px}
+.count__cell{display:flex;flex-direction:column;gap:2px}
+.count__n{font-size:clamp(46px,15.5vw,72px);line-height:.92;color:var(--ink)}
+.count__u{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);font-family:var(--f-display);font-weight:700}
+.count__sep{font-size:clamp(30px,9vw,44px);line-height:1.15;color:var(--taupe);padding-bottom:12px}
+.count__over{font-size:var(--step-2);color:var(--ink);font-weight:700;letter-spacing:-.02em}
+
+/* buttons */
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:56px;padding:0 22px;
+  border:0;border-radius:2px;
+  font-family:var(--f-body);font-size:17px;font-weight:700;letter-spacing:-.01em;
+  cursor:pointer;text-decoration:none;
+  transition:transform .12s ease, background-color .15s ease, border-color .15s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn--solid{background:var(--ink);color:var(--ground)}
+.btn--solid:hover{background:var(--ink-soft)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line);min-height:50px;font-size:15px}
+.btn--ghost:hover{border-color:var(--ink)}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.btn__arrow{font-family:var(--f-display);font-weight:700}
+.hero .btn--solid{margin-top:26px}
+.hero__meta{margin-top:18px;display:flex;flex-direction:column;gap:6px}
+.hero__meta div{display:flex;gap:10px;font-size:var(--step--1);color:var(--muted)}
+.hero__meta dt{color:var(--graphite);min-width:56px;font-family:var(--f-display);font-weight:700;letter-spacing:.08em;font-size:10px;text-transform:uppercase;padding-top:3px}
+.hero__meta dd{margin:0}
+
+/* ── welcome kit (inverted highlight) ── */
+.kitwrap{background:var(--taupe);border-block:1px solid #B3A9A7}
+.kitwrap .eyebrow{color:var(--ink)}
+.kitwrap .lede{color:#403A39}
+.prize__n{display:flex;align-items:baseline;gap:12px;margin-top:4px}
+.prize__n b{font-family:var(--f-display);font-size:clamp(72px,24vw,116px);line-height:.82;color:var(--ink);letter-spacing:-.055em;font-weight:700}
+.prize__n span{font-size:var(--step-2);font-weight:700;letter-spacing:-.02em}
+.kit{margin-top:4px;background:var(--white);border-radius:3px;padding:20px}
+.kit ul{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.kit li{display:flex;gap:11px;font-size:15px;line-height:1.5;align-items:baseline}
+.kit li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ink);flex:none;translate:0 -3px}
+.kit li b{font-weight:700}
+.kit .fine{margin-top:16px}
+
+/* ── stations (how it works) ── */
+.station{display:grid;grid-template-columns:auto 1fr;gap:0 18px;padding-block:24px;border-top:1px solid var(--line)}
+.station:last-of-type{border-bottom:1px solid var(--line)}
+.station__n{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--graphite);grid-row:1/3;padding-top:5px;font-variant-numeric:tabular-nums}
+.station h3{margin-bottom:5px}
+.station p{color:var(--muted);font-size:15px;line-height:1.6}
+
+/* ── booth events ── */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.ev + .ev{margin-top:12px}
+.ev img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--taupe)}
+.ev__body{padding:20px}
+.ev__tag{
+  display:inline-block;font-family:var(--f-display);font-size:10px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 9px;border-radius:2px;margin-bottom:12px;
+}
+.ev__tag--main{background:var(--ink);color:var(--ground)}
+.ev__tag--sub{background:transparent;color:var(--graphite);border:1px solid var(--line)}
+.ev h3{margin-bottom:7px}
+.ev p{color:var(--muted);font-size:15px;line-height:1.65}
+.ev__reward{margin-top:16px;border-top:1px solid var(--line);padding-top:15px;display:flex;flex-direction:column;gap:9px}
+.ev__reward div{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:baseline;font-size:14.5px}
+.ev__reward dt{font-family:var(--f-display);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--graphite);text-transform:uppercase}
+.ev__reward dd{margin:0}
+.ev__give{
+  margin-top:15px;background:var(--white);border-radius:2px;padding:12px 14px;
+  font-size:14px;line-height:1.55;
+}
+.ev__give b{font-weight:700}
+
+/* ── visit / faq ── */
+.info{display:grid;gap:0;border-top:1px solid var(--line)}
+.info div{display:grid;grid-template-columns:80px 1fr;gap:16px;padding-block:16px;border-bottom:1px solid var(--line);align-items:baseline}
+.info dt{font-family:var(--f-display);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--graphite)}
+.info dd{margin:0;font-size:15.5px}
+.info dd small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.maplinks{display:flex;gap:9px;margin-top:18px}
+.maplinks .btn{flex:1}
+
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{padding:18px 30px 18px 0;font-size:15.5px;font-weight:700;letter-spacing:-.015em;cursor:pointer;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:17px;color:var(--graphite);font-family:var(--f-display);font-size:19px;font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 20px;color:var(--muted);font-size:14.5px;line-height:1.7}
+.faq p b{color:var(--ink)}
+
+/* ── signup (inverted) ── */
+.signup{background:var(--ink);color:var(--ground)}
+.signup h2{color:var(--white)}
+.signup .eyebrow{color:#8E9296}
+.signup .lede{color:#A9A5A1}
+.signup .lede b{color:var(--white)}
+.field{display:flex;flex-direction:column;gap:7px}
+.field > label{font-size:13px;font-weight:700;letter-spacing:-.01em;color:#D6D2CE}
+.field .req{color:#E88A7D;margin-left:3px}
+.field input[type=text],.field input[type=tel]{
+  font-family:var(--f-body);font-size:16px;
+  padding:15px 14px;border:1px solid #3C3C40;border-radius:2px;
+  background:#212125;color:var(--white);width:100%;
+}
+.field input::placeholder{color:#6B6B70}
+.field input:focus{border-color:var(--white);outline:none;box-shadow:0 0 0 3px rgba(195,185,183,.28)}
+.field input[aria-invalid=true]{border-color:#E88A7D}
+.err{font-size:12px;color:#F0A093;min-height:0}
+.err:empty{display:none}
+.signup legend{font-size:13px;font-weight:700;color:#D6D2CE;padding:0 0 7px}
+.signup legend .opt{font-weight:400;color:#85817E}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:block;padding:11px 15px;border:1px solid #3C3C40;border-radius:2px;font-size:14px;background:#212125;color:#D6D2CE;transition:all .12s ease}
+.chip input:checked + span{background:var(--ground);color:var(--ink);border-color:var(--ground)}
+.chip input:focus-visible + span{outline:2px solid var(--white);outline-offset:2px}
+
+.consent{display:flex;flex-direction:column;gap:12px;border-top:1px solid #3C3C40;padding-top:18px}
+.consent label{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.55;color:#C4C0BC;cursor:pointer}
+.consent input[type=checkbox]{margin:3px 0 0;width:19px;height:19px;flex:none;accent-color:var(--ground);cursor:pointer}
+.consent .tag{font-weight:700;color:var(--white)}
+.consent details{margin-left:29px}
+.consent summary{font-size:12px;color:#8E8A87;cursor:pointer;list-style:none}
+.consent summary::-webkit-details-marker{display:none}
+.consent summary::before{content:"자세히 ▾ "}
+.consent details[open] summary::before{content:"접기 ▴ "}
+.consent details p{font-size:12px;color:#A9A5A1;line-height:1.65;margin-top:7px;padding:11px 13px;background:#212125;border-radius:2px}
+.consent details p b{color:#D6D2CE}
+
+.signup .btn--solid{background:var(--ground);color:var(--ink)}
+.signup .btn--solid:hover{background:var(--white)}
+.formnote{font-size:12px;color:#85817E;text-align:center;line-height:1.6}
+.formerr{display:none;background:#3A2320;border:1px solid #6E3B34;color:#F3B5AA;padding:13px 15px;border-radius:2px;font-size:13.5px;line-height:1.55}
+.formerr.on{display:block}
+
+/* done state */
+.done{display:none;text-align:center;align-items:center}
+.done.on{display:flex;flex-direction:column;gap:22px}
+.done__mark{width:60px;height:60px;border-radius:50%;background:var(--ground);color:var(--ink);display:grid;place-items:center;font-size:28px;font-family:var(--f-display);font-weight:700}
+.done h2{font-size:var(--step-2)}
+.done__steps{text-align:left;width:100%;background:#212125;border-radius:3px;padding:18px 20px;display:flex;flex-direction:column;gap:11px}
+.done__steps div{display:flex;gap:11px;font-size:14px;color:#B6B2AE;line-height:1.55}
+.done__steps b{color:var(--white);font-family:var(--f-display);flex:none;font-size:12px;padding-top:3px}
+.done__btns{display:flex;flex-direction:column;gap:9px;width:100%}
+.done .btn--ghost{color:var(--ground);border-color:#3C3C40}
+.done .btn--ghost:hover{border-color:var(--ground)}
+
+/* ── footer ── */
+footer{padding:44px 0 calc(112px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+footer img{width:96px}
+footer .fine{margin-top:16px}
+
+/* ── sticky cta ── */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;
+  background:rgba(228,225,220,.92);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--line);
+  padding:11px var(--pad) calc(11px + env(safe-area-inset-bottom));
+  translate:0 110%;
+  transition:translate .28s cubic-bezier(.22,.7,.3,1);
+}
+.sticky.on{translate:0 0}
+.sticky__in{width:var(--rail);margin-inline:auto;display:flex;align-items:center;gap:14px}
+.sticky__txt{flex:1;min-width:0}
+.sticky__txt b{display:block;font-size:13.5px;font-weight:700;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky__txt span{display:block;font-size:11px;color:var(--muted)}
+.sticky .btn{flex:none;min-height:48px;padding-inline:20px;font-size:15px}
+
+/* ── reveal ── */
+.rv{opacity:0;transform:translateY(16px)}
+.rv.in{opacity:1;transform:none;transition:opacity .55s ease, transform .55s cubic-bezier(.22,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){
+  .rv,.rv.in{opacity:1;transform:none;transition:none}
+  .sticky,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero">
+  <div class="hero__ring" aria-hidden="true"></div>
+  <div class="rail hero__inner">
+    <div class="brandbar">
+      <img src="assets/logo-black.png" alt="DARIMATI" width="112" height="26">
+      <span class="x">REXTREME 2026</span>
+    </div>
+
+    <p class="eyebrow">08.01 SAT · 광교 수원컨벤션센터</p>
+    <h1>웰컴키트,<br>부스에서<br>받아가세요</h1>
+    <p class="lede">지금 사전등록하고 8월 1일 DARIMATI 부스에 오시면, <b>선착순 100명</b>에게 수건을 포함한 웰컴키트를 드립니다.</p>
+
+    <a href="#signup" class="btn btn--solid" data-cta="hero">웰컴키트 사전등록 <span class="btn__arrow">→</span></a>
+
+    <div class="count" id="count">
+      <div class="count__label">
+        <p class="eyebrow">REXTREME D-DAY</p>
+        <p class="fine">2026.08.01</p>
+      </div>
+      <div class="count__grid" id="countGrid" role="timer" aria-live="off">
+        <div class="count__cell"><span class="num count__n" id="cd">--</span><span class="count__u">Days</span></div>
+        <span class="count__sep num">:</span>
+        <div class="count__cell"><span class="num count__n" id="ch">--</span><span class="count__u">Hrs</span></div>
+        <span class="count__sep num">:</span>
+        <div class="count__cell"><span class="num count__n" id="cm">--</span><span class="count__u">Min</span></div>
+      </div>
+    </div>
+
+    <dl class="hero__meta">
+      <div><dt>등록마감</dt><dd>2026년 7월 31일 (목) 23:59</dd></div>
+      <div><dt>부스</dt><dd data-fill="booth">부스 번호 공개 예정</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ══════════ WELCOME KIT ══════════ -->
+<section class="kitwrap">
+  <div class="rail stack gap-l">
+    <div class="stack gap-s rv">
+      <p class="eyebrow">Welcome kit</p>
+      <div class="prize__n">
+        <b class="num">100</b>
+        <span>명 한정 웰컴키트</span>
+      </div>
+      <p class="lede">사전등록을 마치고 8월 1일 부스에 오신 <b>선착순 100명</b>에게 DARIMATI 웰컴키트를 드립니다. 수건을 포함한 구성이에요.</p>
+    </div>
+
+    <div class="kit rv">
+      <p class="eyebrow">What's inside</p>
+      <ul>
+        <li><b>DARIMATI 수건</b></li>
+        <li data-fill="kit">추가 구성품 공개 예정</li>
+      </ul>
+      <p class="fine">웰컴키트는 사전등록자에게만 드리며, 선착순 100명 소진 시 종료됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOW IT WORKS (3 STEP) ══════════ -->
+<section>
+  <div class="rail stack gap-l">
+    <div class="stack gap-s rv">
+      <p class="eyebrow">How it works</p>
+      <h2>웰컴키트 받는 법,<br>세 단계면 끝</h2>
+    </div>
+    <div class="rv">
+      <div class="station">
+        <span class="station__n">01</span>
+        <h3>지금 사전등록</h3>
+        <p>이름과 휴대폰 번호만 있으면 30초면 끝납니다. 등록은 7월 31일 23:59에 마감돼요.</p>
+      </div>
+      <div class="station">
+        <span class="station__n">02</span>
+        <h3>8월 1일, DARIMATI 부스 방문</h3>
+        <p>당일 아침 부스 위치와 운영 시간을 문자로 보내드립니다. 이 문자가 곧 사전등록 확인용이에요.</p>
+      </div>
+      <div class="station">
+        <span class="station__n">03</span>
+        <h3>선착순 100명, 웰컴키트 수령</h3>
+        <p>부스에서 문자를 보여주고 셔틀런에 참여하시면 웰컴키트를 드립니다. 부스 도착 순 선착순 100명, 소진 시 종료.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BOOTH EVENTS ══════════ -->
+<section>
+  <div class="rail stack gap-l">
+    <div class="stack gap-s rv">
+      <p class="eyebrow">At the booth</p>
+      <h2>부스에서 하는 것</h2>
+      <p class="lede">웰컴키트는 사전등록자 한정이지만, 아래 이벤트는 <b>등록 없이 누구나</b> 참여하실 수 있어요.</p>
+    </div>
+
+    <div class="rv">
+      <article class="ev">
+        <img src="assets/hero.jpg" alt="BR-001 하이브리드 트레이닝화를 신고 달리는 모습" width="860" height="538" loading="lazy">
+        <div class="ev__body">
+          <span class="ev__tag ev__tag--main">Main Event</span>
+          <h3>셔틀런 챌린지</h3>
+          <p>BR-001 하이브리드 트레이닝화를 신고 셔틀런 기록에 도전합니다. 순위별로 리워드가 걸려 있고, 기록과 상관없이 참여만 해도 사은품을 드립니다. 웰컴키트 수령 조건이기도 해요.</p>
+          <dl class="ev__reward" data-fill="rank">
+            <div><dt>1st</dt><dd>리워드 공개 예정</dd></div>
+            <div><dt>2nd</dt><dd>리워드 공개 예정</dd></div>
+            <div><dt>3rd</dt><dd>리워드 공개 예정</dd></div>
+          </dl>
+          <p class="ev__give" data-fill="giveaway"><b>참여 사은품 100% 증정</b> — 품목 공개 예정</p>
+        </div>
+      </article>
+
+      <article class="ev">
+        <div class="ev__body">
+          <span class="ev__tag ev__tag--sub">Sub Event</span>
+          <h3>트라이얼 박스 점프</h3>
+          <p>BR-001을 직접 신어보는 게 핵심입니다. 그 상태로 박스 점프를 가볍게 몇 개. 발이 어떻게 반응하는지는 신어봐야 압니다.</p>
+          <p class="ev__give"><b>리플렉티브 스티커 증정</b> — 참여하신 모든 분께</p>
+        </div>
+      </article>
+
+      <article class="ev">
+        <div class="ev__body">
+          <span class="ev__tag ev__tag--sub">Photo</span>
+          <h3>인증샷 부스</h3>
+          <p>부스에서 인생샷 한 장 남겨가세요. 오늘 뛴 기록보다 오래 남습니다.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ VISIT ══════════ -->
+<section id="visit">
+  <div class="rail stack gap-l">
+    <div class="stack gap-s rv">
+      <p class="eyebrow">Visit</p>
+      <h2>오시는 길</h2>
+    </div>
+    <div class="rv">
+      <dl class="info">
+        <div><dt>Date</dt><dd>2026년 8월 1일 (토)<small data-fill="hours">부스 운영 시간 공개 예정</small></dd></div>
+        <div><dt>Place</dt><dd>수원컨벤션센터<small>경기 수원시 영통구 광교중앙로 140</small></dd></div>
+        <div><dt>Booth</dt><dd data-fill="booth">부스 번호 공개 예정<small>확정되면 8월 1일 안내 문자로 알려드립니다</small></dd></div>
+        <div><dt>Event</dt><dd>REXTREME 2026<small>하이브리드 피트니스 레이스</small></dd></div>
+      </dl>
+      <div class="maplinks">
+        <a class="btn btn--ghost" href="https://map.naver.com/p/search/수원컨벤션센터" target="_blank" rel="noopener">네이버지도</a>
+        <a class="btn btn--ghost" href="https://map.kakao.com/?q=수원컨벤션센터" target="_blank" rel="noopener">카카오맵</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section style="padding-top:0">
+  <div class="rail stack gap-l">
+    <div class="stack gap-s rv">
+      <p class="eyebrow">FAQ</p>
+      <h2>자주 묻는 질문</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>사전등록만 하면 웰컴키트를 받나요?</summary>
+        <p>아니요. 사전등록은 <b>자격</b>이고, 8월 1일 부스에 오셔서 <b>셔틀런에 참여</b>하셔야 받습니다. 지급 순서는 부스 도착 순, 선착순 100명입니다.</p>
+      </details>
+      <details>
+        <summary>사전등록을 안 했는데 셔틀런에 참여할 수 있나요?</summary>
+        <p>가능합니다. 셔틀런, 박스 점프, 인증샷 부스는 누구나 참여하실 수 있고 참여 사은품과 리플렉티브 스티커도 드립니다. 다만 <b>선착순 100명 웰컴키트는 사전등록자만</b> 받으실 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>웰컴키트에는 뭐가 들어있나요?</summary>
+        <p>DARIMATI 수건을 포함한 구성입니다. <b data-fill="kit">추가 구성품은 공개 예정</b>이에요. 확정되는 대로 이 페이지에서 안내드립니다.</p>
+      </details>
+      <details>
+        <summary>셔틀런은 꼭 BR-001을 신어야 하나요?</summary>
+        <p>네. 부스에 사이즈별로 준비해둡니다. 기록 도전이 목적이기도 하지만, 신어보시는 게 더 중요합니다.</p>
+      </details>
+      <details>
+        <summary>REXTREME 참가 신청을 해야만 등록할 수 있나요?</summary>
+        <p>아닙니다. 선수로 참가하지 않고 관람만 하셔도 부스에 오시면 됩니다. 아직 참가 여부가 정해지지 않았어도 등록 가능합니다.</p>
+      </details>
+      <details>
+        <summary>문자를 못 받으면 어떻게 하나요?</summary>
+        <p>스팸함을 먼저 확인해주세요. 그래도 없다면 부스에서 등록하신 이름과 휴대폰 번호를 말씀해주시면 명단에서 확인해드립니다.</p>
+      </details>
+      <details>
+        <summary>한 사람이 여러 번 등록해도 되나요?</summary>
+        <p>중복 등록해도 웰컴키트는 1인 1개입니다. 같은 휴대폰 번호는 하나로 처리됩니다.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SIGNUP (final CTA) ══════════ -->
+<section class="signup" id="signup">
+  <div class="rail">
+
+    <form class="stack gap-l" id="form" novalidate>
+      <div class="stack gap-s">
+        <p class="eyebrow">Pre-register</p>
+        <h2>웰컴키트 사전등록</h2>
+        <p class="lede">8월 1일 안내 문자를 받고, <b>선착순 100명 웰컴키트</b> 자격을 받으세요. 30초면 끝납니다.</p>
+      </div>
+
+      <div class="formerr" id="formErr" role="alert"></div>
+
+      <div class="field">
+        <label for="f_name">이름<span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f_name" name="name" autocomplete="name" placeholder="홍길동" required>
+        <p class="err" id="e_name" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="f_phone">휴대폰 번호<span class="req" aria-hidden="true">*</span></label>
+        <input type="tel" id="f_phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-1234-5678" maxlength="13" required>
+        <p class="err" id="e_phone" aria-live="polite"></p>
+      </div>
+
+      <fieldset class="field" style="border:0;padding:0;margin:0">
+        <legend>8월 1일, 어떻게 오시나요?<span class="req" aria-hidden="true">*</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="join" value="선수 참가" required><span>선수로 참가해요</span></label>
+          <label class="chip"><input type="radio" name="join" value="관람"><span>관람하러 가요</span></label>
+          <label class="chip"><input type="radio" name="join" value="미정"><span>아직 미정</span></label>
+        </div>
+        <p class="err" id="e_join" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset class="field" style="border:0;padding:0;margin:0">
+        <legend>관심 있는 제품 <span class="opt">(선택)</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="interest" value="BR-001 트레이닝화"><span>BR-001 트레이닝화</span></label>
+          <label class="chip"><input type="checkbox" name="interest" value="러닝벨트"><span>러닝벨트</span></label>
+          <label class="chip"><input type="checkbox" name="interest" value="인솔"><span>인솔</span></label>
+          <label class="chip"><input type="checkbox" name="interest" value="캡모자"><span>캡모자</span></label>
+        </div>
+      </fieldset>
+
+      <div class="consent">
+        <label>
+          <input type="checkbox" id="c_privacy" required>
+          <span><span class="tag">[필수]</span> 개인정보 수집·이용에 동의합니다.</span>
+        </label>
+        <details>
+          <summary>내용 보기</summary>
+          <p><b>수집 항목</b> 이름, 휴대폰 번호, 참가 형태, 관심 제품<br>
+          <b>이용 목적</b> REXTREME 2026 DARIMATI 부스 사전등록 확인 및 현장 웰컴키트 지급<br>
+          <b>보유 기간</b> 행사 종료 후 3개월 이내 파기<br>
+          동의를 거부하실 수 있으나, 거부 시 사전등록 및 웰컴키트 지급이 불가합니다.</p>
+        </details>
+
+        <label>
+          <input type="checkbox" id="c_ads" required>
+          <span><span class="tag">[필수]</span> 광고성 정보 문자 수신에 동의합니다.</span>
+        </label>
+        <details>
+          <summary>내용 보기</summary>
+          <p>8월 1일 부스 안내 문자 및 DARIMATI 소식·혜택 안내를 문자로 발송합니다.
+          수신 동의 없이는 당일 안내 문자를 보내드릴 수 없어 웰컴키트 수령이 어렵습니다.
+          언제든 무료수신거부(문자 내 안내 번호)로 철회하실 수 있습니다.</p>
+        </details>
+        <p class="err" id="e_consent" aria-live="polite"></p>
+      </div>
+
+      <div class="stack gap-m">
+        <button type="submit" class="btn btn--solid" id="submitBtn">웰컴키트 사전등록하기</button>
+        <p class="formnote">등록 마감 · 2026년 7월 31일 (목) 23:59</p>
+      </div>
+    </form>
+
+    <div class="done" id="done" tabindex="-1">
+      <div class="done__mark" aria-hidden="true">✓</div>
+      <div class="stack gap-s" style="align-items:center">
+        <h2>사전등록 완료</h2>
+        <p class="lede" id="doneName">8월 1일 부스에서 뵙겠습니다.</p>
+      </div>
+      <div class="done__steps">
+        <div><b>01</b><span>8월 1일 아침, 등록하신 번호로 안내 문자를 보내드립니다.</span></div>
+        <div><b>02</b><span>부스에서 그 문자를 스태프에게 보여주세요.</span></div>
+        <div><b>03</b><span>셔틀런에 참여하시면 웰컴키트를 드립니다. 선착순 100명.</span></div>
+      </div>
+      <div class="done__btns">
+        <a class="btn btn--solid" id="calBtn" href="#" target="_blank" rel="noopener">캘린더에 8/1 추가하기</a>
+        <button class="btn btn--ghost" id="shareBtn" type="button">친구에게 공유하기</button>
+      </div>
+      <p class="fine" style="color:#85817E">사전등록 확인 문자는 발송되지 않습니다. 8월 1일 당일 안내 문자만 발송됩니다.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="rail stack gap-m">
+    <img src="assets/logo-black.png" alt="DARIMATI" width="96" height="22">
+    <p class="fine" data-fill="contact">문의 · 연락처 입력 필요</p>
+    <p class="fine">본 이벤트는 DARIMATI가 주최하며, REXTREME 2026 대회 운영과는 별개로 진행됩니다.<br>수집된 개인정보는 행사 종료 후 3개월 이내 파기됩니다.</p>
+    <p class="fine" style="color:var(--graphite)">© 2026 DARIMATI</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="sticky__in">
+    <div class="sticky__txt">
+      <b>선착순 100명 웰컴키트</b>
+      <span id="stickySub">등록 마감 7/31</span>
+    </div>
+    <a href="#signup" class="btn btn--solid" data-cta="sticky">웰컴키트 사전등록</a>
+  </div>
+</div>
+
+<iframe name="gform_sink" id="gform_sink" style="display:none" title="hidden form target" aria-hidden="true"></iframe>
+
+<script>
+(function(){
+"use strict";
+
+/* ═══════════════════════════════════════════════════
+   CONFIG — 배포 전 여기만 채우면 됩니다. (README 참고)
+   ═══════════════════════════════════════════════════ */
+var CONFIG = {
+  GFORM_ACTION: "",   // https://docs.google.com/forms/d/e/<ID>/formResponse
+  ENTRY: {
+    name:     "",     // entry.0000000000
+    phone:    "",
+    join:     "",
+    interest: "",
+    consent:  "",
+    source:   ""      // utm / 유입경로 (배너 성과 추적용)
+  },
+  DEADLINE_KST: "2026-07-31T23:59:59+09:00",
+  EVENT_KST:    "2026-08-01T00:00:00+09:00"
+};
+
+var $ = function(s,r){return (r||document).querySelector(s)};
+var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ── 1. countdown (KST-fixed, device timezone independent) ── */
+var eventAt = new Date(CONFIG.EVENT_KST).getTime();
+var deadlineAt = new Date(CONFIG.DEADLINE_KST).getTime();
+var elD=$("#cd"), elH=$("#ch"), elM=$("#cm"), grid=$("#countGrid");
+
+function pad(n){return n<10?"0"+n:""+n}
+function tickCountdown(){
+  var diff = eventAt - Date.now();
+  if(diff <= 0){
+    grid.innerHTML = '<p class="count__over">오늘, 부스에서 만나요</p>';
+    return false;
+  }
+  var mins = Math.floor(diff/60000);
+  elD.textContent = pad(Math.floor(mins/1440));
+  elH.textContent = pad(Math.floor(mins/60)%24);
+  elM.textContent = pad(mins%60);
+  return true;
+}
+if(tickCountdown()) setInterval(tickCountdown, 30000);
+
+/* ── 2. registration window ── */
+var closed = Date.now() > deadlineAt;
+if(closed){
+  $("#submitBtn").disabled = true;
+  $("#submitBtn").textContent = "사전등록 마감";
+  $("#formErr").className = "formerr on";
+  $("#formErr").textContent = "사전등록이 마감되었습니다. 8월 1일 부스에서는 사전등록 없이도 셔틀런과 박스 점프에 참여하실 수 있습니다.";
+  $("#stickySub").textContent = "사전등록 마감";
+  // Send CTAs to the directions block instead of a form nobody can submit.
+  $$('.sticky .btn, .hero .btn--solid').forEach(function(b){
+    b.textContent = "부스 위치 보기";
+    b.setAttribute("href", "#visit");
+  });
+}
+
+/* ── 3. sticky CTA — show once hero CTA scrolls out, hide over the form ── */
+var sticky = $("#sticky"), signup = $("#signup");
+if("IntersectionObserver" in window){
+  var heroBtn = $('.hero .btn--solid');
+  var heroOut = false, formIn = false;
+  function sync(){ sticky.classList.toggle("on", heroOut && !formIn) }
+  new IntersectionObserver(function(e){ heroOut = !e[0].isIntersecting; sync() },{threshold:0}).observe(heroBtn);
+  new IntersectionObserver(function(e){ formIn = e[0].isIntersecting; sync() },{threshold:0}).observe(signup);
+
+  /* ── 4. scroll reveal ── */
+  var ro = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add("in"); ro.unobserve(en.target) }
+    });
+  },{threshold:.12, rootMargin:"0px 0px -8% 0px"});
+  $$(".rv").forEach(function(el){ ro.observe(el) });
+} else {
+  $$(".rv").forEach(function(el){ el.classList.add("in") });
+}
+
+/* ── 5. phone auto-format ── */
+var phone = $("#f_phone");
+phone.addEventListener("input", function(){
+  var v = phone.value.replace(/\D/g,"").slice(0,11);
+  if(v.length > 7)      v = v.slice(0,3)+"-"+v.slice(3,7)+"-"+v.slice(7);
+  else if(v.length > 3) v = v.slice(0,3)+"-"+v.slice(3);
+  phone.value = v;
+});
+
+/* ── 6. attribution: which banner produced this signup? ── */
+function attribution(){
+  var p = new URLSearchParams(location.search);
+  var keys = ["utm_source","utm_medium","utm_campaign","utm_content"];
+  var out = keys.filter(function(k){return p.get(k)}).map(function(k){return k+"="+p.get(k)});
+  if(!out.length && document.referrer) out.push("ref="+document.referrer);
+  if(!out.length) out.push("direct");
+  return out.join(" | ");
+}
+
+/* ── 7. validate + submit ── */
+var form = $("#form"), errBox = $("#formErr");
+
+function setErr(input, msgEl, msg){
+  msgEl.textContent = msg || "";
+  if(input) input.setAttribute("aria-invalid", msg ? "true" : "false");
+  return !msg;
+}
+
+function validate(){
+  var ok = true;
+  var name = $("#f_name");
+  ok = setErr(name, $("#e_name"), name.value.trim().length < 1 ? "이름을 입력해주세요." : "") && ok;
+
+  var digits = phone.value.replace(/\D/g,"");
+  var pMsg = "";
+  if(!digits) pMsg = "휴대폰 번호를 입력해주세요.";
+  else if(!/^01[016789]\d{7,8}$/.test(digits)) pMsg = "올바른 휴대폰 번호를 입력해주세요. 예) 010-1234-5678";
+  ok = setErr(phone, $("#e_phone"), pMsg) && ok;
+
+  var join = $('input[name=join]:checked');
+  ok = setErr(null, $("#e_join"), join ? "" : "8월 1일 방문 형태를 선택해주세요.") && ok;
+
+  var c1 = $("#c_privacy").checked, c2 = $("#c_ads").checked;
+  ok = setErr(null, $("#e_consent"), (c1 && c2) ? "" : "필수 항목에 모두 동의해주세요.") && ok;
+
+  return ok;
+}
+
+form.addEventListener("submit", function(ev){
+  ev.preventDefault();
+  if(closed) return;
+
+  errBox.className = "formerr";
+  if(!validate()){
+    var firstErr = $('[aria-invalid=true]') || $(".err:not(:empty)");
+    if(firstErr) firstErr.scrollIntoView({block:"center", behavior:"smooth"});
+    return;
+  }
+
+  if(!CONFIG.GFORM_ACTION || !CONFIG.ENTRY.name){
+    errBox.className = "formerr on";
+    errBox.textContent = "폼이 아직 연결되지 않았습니다. 배포 전 CONFIG.GFORM_ACTION과 ENTRY 값을 채워주세요.";
+    console.error("[DARIMATI] CONFIG.GFORM_ACTION / CONFIG.ENTRY 가 비어 있습니다.");
+    return;
+  }
+
+  var btn = $("#submitBtn");
+  btn.disabled = true;
+  btn.textContent = "등록 중…";
+
+  // Google Forms rejects cross-origin reads, so we POST through a hidden iframe.
+  var interests = $$('input[name=interest]:checked').map(function(i){return i.value}).join(", ");
+  var payload = {};
+  payload[CONFIG.ENTRY.name]  = $("#f_name").value.trim();
+  payload[CONFIG.ENTRY.phone] = phone.value;
+  payload[CONFIG.ENTRY.join]  = $('input[name=join]:checked').value;
+  if(CONFIG.ENTRY.interest) payload[CONFIG.ENTRY.interest] = interests;
+  if(CONFIG.ENTRY.consent)  payload[CONFIG.ENTRY.consent]  = "개인정보 수집·이용 동의, 광고성 정보 수신 동의";
+  if(CONFIG.ENTRY.source)   payload[CONFIG.ENTRY.source]   = attribution();
+
+  var ghost = document.createElement("form");
+  ghost.action = CONFIG.GFORM_ACTION;
+  ghost.method = "POST";
+  ghost.target = "gform_sink";
+  ghost.style.display = "none";
+  Object.keys(payload).forEach(function(k){
+    if(!k) return;
+    var i = document.createElement("input");
+    i.type = "hidden"; i.name = k; i.value = payload[k];
+    ghost.appendChild(i);
+  });
+  document.body.appendChild(ghost);
+
+  // The iframe load event is our only success signal — Google's response is opaque.
+  var settled = false;
+  var sink = $("#gform_sink");
+  function succeed(){
+    if(settled) return;
+    settled = true;
+    sink.removeEventListener("load", succeed);
+    ghost.remove();
+    showDone($("#f_name").value.trim());
+  }
+  sink.addEventListener("load", succeed);
+  setTimeout(succeed, 3500); // opaque POST; assume delivered rather than block the user
+  ghost.submit();
+});
+
+/* ── 8. completion ── */
+function showDone(name){
+  form.style.display = "none";
+  var done = $("#done");
+  done.classList.add("on");
+  $("#doneName").textContent = name + "님, 8월 1일 부스에서 뵙겠습니다.";
+
+  var cal = new URL("https://calendar.google.com/calendar/render");
+  cal.searchParams.set("action","TEMPLATE");
+  cal.searchParams.set("text","REXTREME 2026 · DARIMATI 부스");
+  cal.searchParams.set("dates","20260801/20260802");
+  cal.searchParams.set("details","사전등록 완료. 부스에서 안내 문자를 보여주고 셔틀런에 참여하면 선착순 100명 웰컴키트를 받을 수 있습니다.");
+  cal.searchParams.set("location","수원컨벤션센터");
+  $("#calBtn").href = cal.toString();
+
+  done.scrollIntoView({block:"start", behavior:"smooth"});
+  done.focus({preventScroll:true});
+}
+
+/* ── 9. share ── */
+$("#shareBtn").addEventListener("click", function(){
+  var btn = this;
+  var data = {
+    title:"DARIMATI × REXTREME 2026",
+    text:"8/1 렉스트림 DARIMATI 부스! 사전등록하면 선착순 100명 웰컴키트를 받을 수 있어요.",
+    url: location.origin + location.pathname
+  };
+  if(navigator.share){ navigator.share(data).catch(function(){}); return; }
+  navigator.clipboard.writeText(data.url).then(function(){
+    var t = btn.textContent;
+    btn.textContent = "링크를 복사했어요";
+    setTimeout(function(){ btn.textContent = t }, 1800);
+  }).catch(function(){
+    btn.textContent = "복사 실패 — 주소창을 길게 눌러 복사해주세요";
+  });
+});
+
+/* ── 10. smooth anchor + focus first field ── */
+$$('a[href="#signup"]').forEach(function(a){
+  a.addEventListener("click", function(e){
+    e.preventDefault();
+    signup.scrollIntoView({behavior:"smooth", block:"start"});
+    if(!closed) setTimeout(function(){ $("#f_name").focus({preventScroll:true}) }, 500);
+  });
+});
+
+})();
+</script>
+</body>
+</html>
