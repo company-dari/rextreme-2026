@@ -90,30 +90,16 @@ p{margin:0}
 .fine{font-size:var(--step--1);color:var(--muted);line-height:1.6}
 .num{font-family:var(--f-display);font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.05em}
 
-/* ── hero ── */
-.hero{position:relative;padding-block:clamp(30px,9vw,54px) clamp(48px,12vw,72px);overflow:hidden}
-.hero__ring{
-  position:absolute;top:clamp(120px,32vw,190px);left:50%;translate:-50% 0;
-  width:min(430px,112vw);aspect-ratio:1;
-  border:1px solid var(--taupe);border-radius:50%;
-  pointer-events:none;
-}
-.hero__inner{position:relative}
-.brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:6px 40px}
-.brandbar img{width:112px;height:auto}
-.brandbar .x{font-family:var(--f-display);font-size:12px;letter-spacing:.16em;color:var(--graphite);font-weight:700}
-.hero h1{margin-top:14px}
-.hero .lede{margin-top:16px;max-width:34ch}
-
-/* countdown */
-.count{margin-top:34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:22px}
-.count__label{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.count__grid{display:flex;align-items:flex-end;gap:clamp(10px,3.4vw,20px);margin-top:10px}
-.count__cell{display:flex;flex-direction:column;gap:2px}
-.count__n{font-size:clamp(46px,15.5vw,72px);line-height:.92;color:var(--ink)}
-.count__u{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);font-family:var(--f-display);font-weight:700}
-.count__sep{font-size:clamp(30px,9vw,44px);line-height:1.15;color:var(--taupe);padding-bottom:12px}
-.count__over{font-size:var(--step-2);color:var(--ink);font-weight:700;letter-spacing:-.02em}
+/* ── hero (full-bleed product image) ── */
+.hero{position:relative;width:min(480px,100%);margin-inline:auto;height:100vh;height:100svh;min-height:560px;max-height:900px;overflow:hidden;background:var(--taupe)}
+.hero__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 48%}
+.hero__grad{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(240,238,235,.70) 0%,rgba(240,238,235,0) 20%,rgba(240,238,235,0) 66%,rgba(230,227,223,.82) 100%)}
+.hero__top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(16px + env(safe-area-inset-top)) var(--pad) 14px}
+.hero__kicker{font-family:var(--f-display);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.hero__dday{font-family:var(--f-display);font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.03em;font-size:clamp(24px,7.5vw,32px);line-height:1;color:var(--ink)}
+.hero__foot{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-direction:column;gap:9px;padding:0 var(--pad) calc(98px + env(safe-area-inset-bottom))}
+.hero__eyebrow{font-family:var(--f-display);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--graphite);margin:0}
+.hero__event{font-size:clamp(30px,9vw,42px);font-weight:700;letter-spacing:-.03em;line-height:1;color:var(--ink);margin:0}
 
 /* buttons */
 .btn{
@@ -131,11 +117,7 @@ p{margin:0}
 .btn--ghost:hover{border-color:var(--ink)}
 .btn[disabled]{opacity:.4;cursor:not-allowed}
 .btn__arrow{font-family:var(--f-display);font-weight:700}
-.hero .btn--solid{margin-top:26px}
-.hero__meta{margin-top:18px;display:flex;flex-direction:column;gap:6px}
-.hero__meta div{display:flex;gap:10px;font-size:var(--step--1);color:var(--muted)}
-.hero__meta dt{color:var(--graphite);min-width:56px;font-family:var(--f-display);font-weight:700;letter-spacing:.08em;font-size:10px;text-transform:uppercase;padding-top:3px}
-.hero__meta dd{margin:0}
+/* hero CTA lives in the fixed bottom bar (.sticky) */
 
 /* ── welcome kit (inverted highlight) ── */
 .kitwrap{background:var(--taupe);border-block:1px solid #B3A9A7}
@@ -275,11 +257,10 @@ footer .fine{margin-top:16px}
   transition:translate .28s cubic-bezier(.22,.7,.3,1);
 }
 .sticky.on{translate:0 0}
-.sticky__in{width:var(--rail);margin-inline:auto;display:flex;align-items:center;gap:14px}
-.sticky__txt{flex:1;min-width:0}
-.sticky__txt b{display:block;font-size:13.5px;font-weight:700;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sticky__txt span{display:block;font-size:11px;color:var(--muted)}
-.sticky .btn{flex:none;min-height:48px;padding-inline:20px;font-size:15px}
+.sticky__in{width:var(--rail);margin-inline:auto;display:flex;flex-direction:column;gap:7px}
+.sticky__note{font-size:12px;text-align:center;color:var(--muted);letter-spacing:-.01em}
+.sticky__note b{color:var(--ink);font-weight:700}
+.sticky .btn{width:100%;min-height:52px;font-size:16px}
 
 /* ── reveal ── */
 .rv{opacity:0;transform:translateY(16px)}
@@ -294,37 +275,17 @@ footer .fine{margin-top:16px}
 
 <!-- ══════════ HERO ══════════ -->
 <header class="hero">
-  <div class="hero__ring" aria-hidden="true"></div>
-  <div class="rail hero__inner">
-    <div class="brandbar">
-      <img src="assets/logo-black.png" alt="DARIMATI" width="112" height="26">
-      <span class="x">REXTREME 2026</span>
-    </div>
+  <img class="hero__bg" src="assets/hero-main.png" alt="DARIMATI BR-001 하이브리드 트레이닝화" width="860" height="1176">
+  <div class="hero__grad" aria-hidden="true"></div>
 
-    <p class="eyebrow">08.01 SAT · 광교 수원컨벤션센터</p>
-    <h1>웰컴키트,<br>부스에서<br>받아가세요</h1>
-    <p class="lede">지금 사전등록하고 8월 1일 DARIMATI 부스에 오시면, <b>선착순 100명</b>에게 수건을 포함한 웰컴키트를 드립니다.</p>
+  <div class="hero__top">
+    <span class="hero__kicker">REXTREME 2026</span>
+    <span class="hero__dday">D-<span id="cd">--</span></span>
+  </div>
 
-    <a href="#signup" class="btn btn--solid" data-cta="hero">웰컴키트 사전등록 <span class="btn__arrow">→</span></a>
-
-    <div class="count" id="count">
-      <div class="count__label">
-        <p class="eyebrow">REXTREME D-DAY</p>
-        <p class="fine">2026.08.01</p>
-      </div>
-      <div class="count__grid" id="countGrid" role="timer" aria-live="off">
-        <div class="count__cell"><span class="num count__n" id="cd">--</span><span class="count__u">Days</span></div>
-        <span class="count__sep num">:</span>
-        <div class="count__cell"><span class="num count__n" id="ch">--</span><span class="count__u">Hrs</span></div>
-        <span class="count__sep num">:</span>
-        <div class="count__cell"><span class="num count__n" id="cm">--</span><span class="count__u">Min</span></div>
-      </div>
-    </div>
-
-    <dl class="hero__meta">
-      <div><dt>등록마감</dt><dd>2026년 7월 31일 (목) 23:59</dd></div>
-      <div><dt>부스</dt><dd data-fill="booth">부스 번호 공개 예정</dd></div>
-    </dl>
+  <div class="hero__foot">
+    <p class="hero__eyebrow">사전 등록</p>
+    <p class="hero__event">2026 REXTREME</p>
   </div>
 </header>
 
@@ -592,12 +553,9 @@ footer .fine{margin-top:16px}
   </div>
 </footer>
 
-<div class="sticky" id="sticky">
+<div class="sticky on" id="sticky">
   <div class="sticky__in">
-    <div class="sticky__txt">
-      <b>선착순 100명 웰컴키트</b>
-      <span id="stickySub">등록 마감 7/31</span>
-    </div>
+    <span class="sticky__note"><b>선착순 100명 웰컴키트</b> · <span id="stickySub">마감 7/31</span></span>
     <a href="#signup" class="btn btn--solid" data-cta="sticky">웰컴키트 사전등록</a>
   </div>
 </div>
@@ -628,25 +586,21 @@ var CONFIG = {
 var $ = function(s,r){return (r||document).querySelector(s)};
 var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 
-/* ── 1. countdown (KST-fixed, device timezone independent) ── */
+/* ── 1. countdown → hero D-day (KST-fixed, device timezone independent) ── */
 var eventAt = new Date(CONFIG.EVENT_KST).getTime();
 var deadlineAt = new Date(CONFIG.DEADLINE_KST).getTime();
-var elD=$("#cd"), elH=$("#ch"), elM=$("#cm"), grid=$("#countGrid");
+var elD=$("#cd");
 
-function pad(n){return n<10?"0"+n:""+n}
 function tickCountdown(){
   var diff = eventAt - Date.now();
   if(diff <= 0){
-    grid.innerHTML = '<p class="count__over">오늘, 부스에서 만나요</p>';
+    if(elD) elD.textContent = "DAY";   // renders "D-DAY"
     return false;
   }
-  var mins = Math.floor(diff/60000);
-  elD.textContent = pad(Math.floor(mins/1440));
-  elH.textContent = pad(Math.floor(mins/60)%24);
-  elM.textContent = pad(mins%60);
+  if(elD) elD.textContent = Math.ceil(diff/86400000);
   return true;
 }
-if(tickCountdown()) setInterval(tickCountdown, 30000);
+if(tickCountdown()) setInterval(tickCountdown, 60000);
 
 /* ── 2. registration window ── */
 var closed = Date.now() > deadlineAt;
@@ -655,22 +609,18 @@ if(closed){
   $("#submitBtn").textContent = "사전등록 마감";
   $("#formErr").className = "formerr on";
   $("#formErr").textContent = "사전등록이 마감되었습니다. 8월 1일 부스에서는 사전등록 없이도 셔틀런과 박스 점프에 참여하실 수 있습니다.";
-  $("#stickySub").textContent = "사전등록 마감";
-  // Send CTAs to the directions block instead of a form nobody can submit.
-  $$('.sticky .btn, .hero .btn--solid').forEach(function(b){
+  var sub = $("#stickySub"); if(sub) sub.textContent = "마감";
+  // Send the fixed bar to the directions block instead of a form nobody can submit.
+  $$('.sticky .btn').forEach(function(b){
     b.textContent = "부스 위치 보기";
     b.setAttribute("href", "#visit");
   });
 }
 
-/* ── 3. sticky CTA — show once hero CTA scrolls out, hide over the form ── */
+/* ── 3. fixed bottom CTA — always visible, hide only over the form ── */
 var sticky = $("#sticky"), signup = $("#signup");
 if("IntersectionObserver" in window){
-  var heroBtn = $('.hero .btn--solid');
-  var heroOut = false, formIn = false;
-  function sync(){ sticky.classList.toggle("on", heroOut && !formIn) }
-  new IntersectionObserver(function(e){ heroOut = !e[0].isIntersecting; sync() },{threshold:0}).observe(heroBtn);
-  new IntersectionObserver(function(e){ formIn = e[0].isIntersecting; sync() },{threshold:0}).observe(signup);
+  new IntersectionObserver(function(e){ sticky.classList.toggle("on", !e[0].isIntersecting) },{threshold:0}).observe(signup);
 
   /* ── 4. scroll reveal ── */
   var ro = new IntersectionObserver(function(entries){
